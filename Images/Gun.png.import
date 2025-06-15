@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vlexjbk4ihyt"
-path="res://.godot/imported/steve.jpg-84f7f4dfb0f547453b6ba6b8b1ae662b.ctex"
+uid="uid://cwqo1blmrqg42"
+path="res://.godot/imported/Gun.png-77c82e03038406dff859f51cb49a01a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scene/steve.jpg"
-dest_files=["res://.godot/imported/steve.jpg-84f7f4dfb0f547453b6ba6b8b1ae662b.ctex"]
+source_file="res://Images/Gun.png"
+dest_files=["res://.godot/imported/Gun.png-77c82e03038406dff859f51cb49a01a7.ctex"]
 
 [params]
 

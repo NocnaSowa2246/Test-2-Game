@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://b7vo7m23ny7mv"]
+[gd_scene load_steps=5 format=3 uid="uid://b7vo7m23ny7mv"]
+
+[ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_emx41"]
+[ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/player.tscn" id="2_dlwip"]
+[ext_resource type="PackedScene" uid="uid://cn1ic3bdl375r" path="res://Scene/gun.tscn" id="3_ejll3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlwip"]
+size = Vector2(1143, 225)
 
 [node name="world" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(370, 562)
+
+[node name="Steve" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(202, -34)
+scale = Vector2(5.06667, 1)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(205.5, -33)
+shape = SubResource("RectangleShape2D_dlwip")
+
+[node name="Player" parent="." instance=ExtResource("2_dlwip")]
+position = Vector2(572, 348)
+
+[node name="Gun" parent="Player" instance=ExtResource("3_ejll3")]
+scale = Vector2(0.5, 0.5)

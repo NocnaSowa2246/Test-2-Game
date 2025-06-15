@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cn1ic3bdl375r" path="res://Scene/gun.tscn" id="3_ejll3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlwip"]
-size = Vector2(226, 225)
+size = Vector2(1143, 225)
 
 [node name="world" type="Node2D"]
 
@@ -13,11 +13,12 @@ size = Vector2(226, 225)
 position = Vector2(370, 562)
 
 [node name="Steve" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(198, -34)
+position = Vector2(202, -34)
+scale = Vector2(5.06667, 1)
 texture = ExtResource("1_emx41")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(199, -33)
+position = Vector2(205.5, -33)
 shape = SubResource("RectangleShape2D_dlwip")
 
 [node name="Player" parent="." instance=ExtResource("2_dlwip")]

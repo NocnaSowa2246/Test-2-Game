@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://djpw5kgylb3s2"]
+
+[node name="playerui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = 17.0
+offset_top = 16.0
+offset_right = 292.0
+offset_bottom = 43.0
+max_value = 1.0
+value = 1.0
+show_percentage = false

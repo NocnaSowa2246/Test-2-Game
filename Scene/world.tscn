@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7vo7m23ny7mv"]
+[gd_scene load_steps=5 format=3 uid="uid://b7vo7m23ny7mv"]
 
 [ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Scene/steve.jpg" id="1_emx41"]
-[ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/character_body_2d.tscn" id="2_dlwip"]
+[ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/player.tscn" id="2_dlwip"]
+[ext_resource type="PackedScene" uid="uid://cn1ic3bdl375r" path="res://gun.tscn" id="3_ejll3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlwip"]
 size = Vector2(226, 225)
@@ -22,4 +23,5 @@ shape = SubResource("RectangleShape2D_dlwip")
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_dlwip")]
 position = Vector2(566, 302.5)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Gun" parent="CharacterBody2D" instance=ExtResource("3_ejll3")]
+scale = Vector2(0.5, 0.5)

@@ -1,9 +1,15 @@
 extends Node2D
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 var bullet = preload("res://Scene/bullet.tscn")
 var bullet_speed = 1000
 var bullet_instance = bullet.instantiate()
+=======
+var _bullet = preload("res://Scene/bullet.tscn")
+var bullet_speed = 100
+
+>>>>>>> Stashed changes
 =======
 var _bullet = preload("res://Scene/bullet.tscn")
 var bullet_speed = 100
@@ -20,6 +26,9 @@ func _process(delta: float) -> void:
 =======
 		var bullet_instance = bullet.instantiate()
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		bullet_instance.position = global_position
 		bullet_instance.rotation_degrees = rotation_degrees

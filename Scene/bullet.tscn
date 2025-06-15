@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cesd63k8ceii"]
+
+[ext_resource type="Texture2D" uid="uid://cal28sud8bwgm" path="res://Images/bullet.png" id="1_w63l4"]
+
+[node name="bullet" type="Node2D"]
+scale = Vector2(0.25, 0.25)
+
+[node name="Bullet" type="Sprite2D" parent="."]
+texture = ExtResource("1_w63l4")
+flip_h = true

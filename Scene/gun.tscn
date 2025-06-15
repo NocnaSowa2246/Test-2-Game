@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cn1ic3bdl375r"]
 
-[ext_resource type="Script" uid="uid://c28g6x301cxlb" path="res://Script/gun_script.gd" id="1_dk5gl"]
+[ext_resource type="Script" uid="uid://c28g6x301cxlb" path="res://Scripts/gun_script.gd" id="1_dk5gl"]
 [ext_resource type="Texture2D" uid="uid://cwqo1blmrqg42" path="res://Images/Gun.png" id="1_vk1bi"]
 
 [node name="Gun" type="Node2D"]

@@ -20,8 +20,8 @@ texture = ExtResource("1_emx41")
 position = Vector2(199, -33)
 shape = SubResource("RectangleShape2D_dlwip")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_dlwip")]
-position = Vector2(566, 302.5)
+[node name="Player" parent="." instance=ExtResource("2_dlwip")]
+position = Vector2(572, 348)
 
-[node name="Gun" parent="CharacterBody2D" instance=ExtResource("3_ejll3")]
+[node name="Gun" parent="Player" instance=ExtResource("3_ejll3")]
 scale = Vector2(0.5, 0.5)

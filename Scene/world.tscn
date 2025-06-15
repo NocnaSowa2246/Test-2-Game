@@ -1,16 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b7vo7m23ny7mv"]
+[gd_scene load_steps=5 format=3 uid="uid://b7vo7m23ny7mv"]
 
 [ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_emx41"]
 [ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/player.tscn" id="2_dlwip"]
 [ext_resource type="PackedScene" uid="uid://cn1ic3bdl375r" path="res://Scene/gun.tscn" id="3_ejll3"]
-[ext_resource type="Script" uid="uid://dr0gu6s7hvgi1" path="res://Scripts/area_2d.gd" id="4_pcvp0"]
-[ext_resource type="Texture2D" uid="uid://cal28sud8bwgm" path="res://Images/bullet.png" id="5_37axr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlwip"]
 size = Vector2(1143, 225)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ol2hl"]
-size = Vector2(32.25, 21)
 
 [node name="world" type="Node2D"]
 
@@ -31,15 +26,3 @@ position = Vector2(572, 348)
 
 [node name="Gun" parent="Player" instance=ExtResource("3_ejll3")]
 scale = Vector2(0.5, 0.5)
-
-[node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("4_pcvp0")
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-position = Vector2(767, 339)
-scale = Vector2(-0.2842, -0.41974)
-texture = ExtResource("5_37axr")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(770.875, 339.5)
-shape = SubResource("RectangleShape2D_ol2hl")

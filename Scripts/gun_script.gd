@@ -2,6 +2,13 @@ extends Node2D
 
 var bullet = preload("res://Scene/bullet.tscn")
 var bullet_speed = 100
+
+
+var speed = 1000
+
+func _physics_process(delta):
+	position.x+= speed * delta
+
 @onready var gun_image = $Gun
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

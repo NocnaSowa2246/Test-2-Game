@@ -4,15 +4,14 @@ var bullet = preload("res://Scene/bullet.tscn")
 var bullet_speed = 1000
 var bullet_instance = bullet.instantiate()
 @onready var gun_image = $Gun
-<<<<<<< Updated upstream
-=======
-var ammo = 50
+var ammo = 20
+var stash = 50
 
->>>>>>> Stashed changes
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 	if Input.is_action_just_pressed("reload"):
+		ammo=0 #Supid for it to work, but it works.
 		reload()
 	if ammo>0:
 		if Input.is_action_just_pressed("shoot"):
@@ -23,7 +22,11 @@ func _process(delta: float) -> void:
 			bullet_instance.velocity = Vector2(bullet_speed, 0).rotated(rotation)
 			get_tree().get_root().add_child(bullet_instance)
 			ammo = ammo - 1
+			stash = stash - 1
 
 func reload()-> void:
 	await get_tree().create_timer(3.0).timeout
-	ammo=50
+	if stash<20:
+		ammo=stash
+	else:
+		ammo=20

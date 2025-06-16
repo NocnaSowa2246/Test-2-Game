@@ -26,3 +26,15 @@ position = Vector2(572, 348)
 
 [node name="Gun" parent="Player" instance=ExtResource("3_ejll3")]
 scale = Vector2(0.5, 0.5)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(370, 562)
+
+[node name="Steve" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(1432, -28)
+scale = Vector2(5.06667, 1)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(1433, -28)
+shape = SubResource("RectangleShape2D_dlwip")

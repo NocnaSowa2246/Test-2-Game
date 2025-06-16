@@ -3,23 +3,23 @@ extends Node2D
 var bullet = preload("res://Scene/bullet.tscn")
 var bullet_speed = 1000
 var bullet_instance = bullet.instantiate()
-<<<<<<< HEAD
-=======
 var _bullet = preload("res://Scene/bullet.tscn")
->>>>>>> main
+var mode = 0
 @onready var gun_image = $Gun
-var ammo = 20
-var stash = 50
+var ammo = 20 #bullets in magazine
+var stash = 50 #Bullets total.
+var hook = 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
-<<<<<<< HEAD
 	if Input.is_action_just_pressed("reload"):
 		ammo=0 #Supid for it to work, but it works.
 		reload()
+	if Input.is_action_just_pressed("swap"):
+		swapper()
 	if ammo>0:
-		if Input.is_action_just_pressed("shoot"):
+		if Input.is_action_just_pressed("shoot") and mode==1:
 			bullet_instance = bullet.instantiate()
 			var bullet_instance = bullet.instantiate()
 			bullet_instance.position = global_position
@@ -28,6 +28,15 @@ func _process(delta: float) -> void:
 			get_tree().get_root().add_child(bullet_instance)
 			ammo = ammo - 1
 			stash = stash - 1
+	if Input.is_action_just_pressed("shoot") and mode==0 and hook==1:
+		hook=0
+		var hook_instance = bullet.instantiate()
+		hook_instance.position = global_position
+		hook_instance.rotation_degrees = rotation_degrees
+		hook_instance.velocity = Vector2(bullet_speed, 0).rotated(rotation)
+		get_tree().get_root().add_child(hook_instance)
+		await get_tree().create_timer(3.0).timeout #Might want to change later
+		hook=1
 
 func reload()-> void:
 	await get_tree().create_timer(3.0).timeout
@@ -35,14 +44,10 @@ func reload()-> void:
 		ammo=stash
 	else:
 		ammo=20
-=======
-	if Input.is_action_just_pressed("shoot"):
 
-		bullet_instance = bullet.instantiate()
-
-		var bullet_instance = bullet.instantiate()
-		bullet_instance.position = global_position
-		bullet_instance.rotation_degrees = rotation_degrees
-		bullet_instance.velocity = Vector2(bullet_speed, 0).rotated(rotation)
-		get_tree().get_root().add_child(bullet_instance)
->>>>>>> main
+func swapper()->void: #Swaps between gun and hook (Hook features not added yet)
+	if Input.is_action_just_pressed("swap"):
+		if mode==0:
+			mode=1
+		if mode==1:
+			mode=0

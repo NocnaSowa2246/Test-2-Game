@@ -4,7 +4,6 @@ var bullet = preload("res://Scene/bullet.tscn")
 var bullet_speed = 1000
 var bullet_instance = bullet.instantiate()
 @onready var gun_image = $Gun
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())

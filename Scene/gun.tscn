@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cn1ic3bdl375r"]
+[gd_scene load_steps=4 format=3 uid="uid://cn1ic3bdl375r"]
 
 [ext_resource type="Script" uid="uid://c28g6x301cxlb" path="res://Scripts/gun_script.gd" id="1_dk5gl"]
 [ext_resource type="Texture2D" uid="uid://cwqo1blmrqg42" path="res://Images/Gun.png" id="1_vk1bi"]
+[ext_resource type="PackedScene" uid="uid://cg2ua5nuds4gi" path="res://Scene/grapple.tscn" id="3_gjdbb"]
 
 [node name="Gun" type="Node2D"]
 script = ExtResource("1_dk5gl")
@@ -9,3 +10,6 @@ script = ExtResource("1_dk5gl")
 [node name="Gun" type="Sprite2D" parent="."]
 position = Vector2(194, 0)
 texture = ExtResource("1_vk1bi")
+
+[node name="Grapple" parent="Gun" instance=ExtResource("3_gjdbb")]
+position = Vector2(129, -20)

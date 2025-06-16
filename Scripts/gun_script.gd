@@ -3,6 +3,10 @@ extends Node2D
 var bullet = preload("res://Scene/bullet.tscn")
 var bullet_speed = 1000
 var bullet_instance = bullet.instantiate()
+<<<<<<< HEAD
+=======
+var _bullet = preload("res://Scene/bullet.tscn")
+>>>>>>> main
 @onready var gun_image = $Gun
 var ammo = 20
 var stash = 50
@@ -10,6 +14,7 @@ var stash = 50
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
+<<<<<<< HEAD
 	if Input.is_action_just_pressed("reload"):
 		ammo=0 #Supid for it to work, but it works.
 		reload()
@@ -30,3 +35,14 @@ func reload()-> void:
 		ammo=stash
 	else:
 		ammo=20
+=======
+	if Input.is_action_just_pressed("shoot"):
+
+		bullet_instance = bullet.instantiate()
+
+		var bullet_instance = bullet.instantiate()
+		bullet_instance.position = global_position
+		bullet_instance.rotation_degrees = rotation_degrees
+		bullet_instance.velocity = Vector2(bullet_speed, 0).rotated(rotation)
+		get_tree().get_root().add_child(bullet_instance)
+>>>>>>> main

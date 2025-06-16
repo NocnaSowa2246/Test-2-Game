@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 [gd_scene format=3 uid="uid://cbll5fx0vjcym"]
+=======
+[gd_scene format=3 uid="uid://b6rjhnowbiut7"]
+>>>>>>> main
 
 [node name="level_one" type="Node2D"]

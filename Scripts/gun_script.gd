@@ -5,6 +5,7 @@ var bullet_speed = 1000
 var bullet_instance = bullet.instantiate()
 var mode = 1
 @onready var gun_image = $Gun
+@onready var tip = $Gun/Grapple
 var ammo = 20 #bullets in magazine
 var stash = 50 #Bullets total.
 var hook = 1
@@ -21,7 +22,7 @@ func _process(delta: float) -> void:
 		if Input.is_action_just_pressed("shoot") and mode == 1:
 			bullet_instance = bullet.instantiate()
 			var bullet_instance = bullet.instantiate()
-			bullet_instance.position = global_position
+			bullet_instance.position = tip.global_position
 			bullet_instance.rotation_degrees = rotation_degrees
 			bullet_instance.velocity = Vector2(bullet_speed, 0).rotated(rotation)
 			get_tree().get_root().add_child(bullet_instance)

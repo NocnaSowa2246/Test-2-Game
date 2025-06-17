@@ -10,6 +10,8 @@ var grappling = 0
 
 
 func _physics_process(delta: float) -> void:
+	
+	
 	if gun.mode == 0 and Input.is_action_just_pressed("shoot") and grappling == 0:
 		hook_p = 0
 		var hook_instance = hook.instantiate()
@@ -29,6 +31,7 @@ func _physics_process(delta: float) -> void:
 		grappling = 0
 		await get_tree().create_timer(3.0).timeout #Might want to change later
 		hook_p = 1
+			
 			
 	# Add the gravity.
 	if not is_on_floor() and grappling == 0:

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cahwf0qw0jcha"]
+
+[ext_resource type="Script" path="res://monster.gd" id="1_mrqeg"]
+[ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="2_ga5te"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ga5te"]
+size = Vector2(250, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrqeg"]
+size = Vector2(225, 225)
+
+[node name="Monster" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_mrqeg")
+
+[node name="Steve" type="Sprite2D" parent="." groups=["enemy"]]
+texture = ExtResource("2_ga5te")
+
+[node name="Attack" type="Area2D" parent="." groups=["enemy"]]
+
+[node name="AttackArea" type="CollisionShape2D" parent="Attack"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_ga5te")
+debug_color = Color(0.994954, 0, 0.213576, 0.42)
+
+[node name="Defend" type="Area2D" parent="." groups=["enemy"]]
+
+[node name="DefendArea" type="CollisionShape2D" parent="Defend"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_ga5te")
+debug_color = Color(0, 0.646388, 0.239891, 0.42)
+
+[node name="Collision" type="CollisionShape2D" parent="." groups=["enemy"]]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_mrqeg")
+
+[connection signal="area_entered" from="Attack" to="." method="_on_attack_area_entered"]
+[connection signal="area_entered" from="Defend" to="." method="_on_defend_area_entered"]

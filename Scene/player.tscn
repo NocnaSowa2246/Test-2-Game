@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://drit8j0w4isri" path="res://Scripts/player.gd" id="1_xa75v"]
 [ext_resource type="PackedScene" uid="uid://djpw5kgylb3s2" path="res://Scene/playerui.tscn" id="3_wv00g"]
 [ext_resource type="PackedScene" uid="uid://cn1ic3bdl375r" path="res://Scene/gun.tscn" id="4_58ae2"]
-[ext_resource type="PackedScene" path="res://Scene/grapple.tscn" id="5_ivevv"]
+[ext_resource type="PackedScene" uid="uid://cg2ua5nuds4gi" path="res://Scene/grapple.tscn" id="5_ivevv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yx0hs"]
 size = Vector2(125, 130)

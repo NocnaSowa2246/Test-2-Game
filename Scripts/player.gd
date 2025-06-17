@@ -22,12 +22,11 @@ func _physics_process(delta: float) -> void:
 		var hook_pos = hook_instance.position
 		var ray_point = grapple_hook.get_collision_point()
 		#move player towards hook bullet
-		while global_position != hook_instance.global_position and global_position.distance_to(hook_instance.global_position) > 60:
+		while global_position != hook_instance.global_position and global_position.distance_to(hook_instance.global_position) > 100:
 			grappling = 1
 			print(global_position.distance_to(hook_instance.global_position))
 			global_position = global_position.move_toward(hook_instance.global_position, delta*SPEED)
 			await get_tree().create_timer(.001).timeout
-		global_position = global_position
 		grappling = 0
 		await get_tree().create_timer(3.0).timeout #Might want to change later
 		hook_p = 1

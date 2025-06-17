@@ -12,7 +12,8 @@ size = Vector2(1143, 225)
 position = Vector2(572, 348)
 
 [node name="wall" type="StaticBody2D" parent="."]
-position = Vector2(370, 562)
+position = Vector2(372, 635)
+scale = Vector2(7.47004, -0.107159)
 
 [node name="Steve" type="Sprite2D" parent="wall"]
 position = Vector2(202, -34)
@@ -20,11 +21,11 @@ scale = Vector2(5.06667, 1)
 texture = ExtResource("1_emx41")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
-position = Vector2(205.5, -33)
+position = Vector2(200, -33)
 shape = SubResource("RectangleShape2D_dlwip")
 
 [node name="wall2" type="StaticBody2D" parent="."]
-position = Vector2(370, 562)
+position = Vector2(334, 671)
 
 [node name="Steve" type="Sprite2D" parent="wall2"]
 position = Vector2(1432, -376)

@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://owrqepcasp0i"]
 
 [ext_resource type="Texture2D" uid="uid://cex5d0gw516go" path="res://Images/mariowalk1.png" id="1_4pctl"]
-[ext_resource type="Script" uid="uid://bi2ctl1fpb7f4" path="res://Scene/zombie.gd" id="1_g2f0o"]
+[ext_resource type="Script" uid="uid://bi2ctl1fpb7f4" path="res://Scripts/zombie.gd" id="1_g2f0o"]
 [ext_resource type="Texture2D" uid="uid://bqqcq807pwbwa" path="res://Images/mariowalk2.png" id="2_g2f0o"]
 [ext_resource type="Texture2D" uid="uid://fbrxmy3sw0x7" path="res://Scene/mariodeath.png" id="2_ueq02"]
 [ext_resource type="Texture2D" uid="uid://c1q4wqbnu6qmk" path="res://Images/mariowalk3.png" id="3_ueq02"]
-[ext_resource type="Script" uid="uid://dx1v4ca6i77ib" path="res://area_2d.gd" id="4_vyth4"]
+[ext_resource type="Script" path="res://area_2d.gd" id="4_vyth4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dicts"]
 animations = [{

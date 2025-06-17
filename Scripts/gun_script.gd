@@ -13,18 +13,15 @@ func _process(delta: float) -> void:
 
 		bullet_instance = bullet.instantiate()
 
-<<<<<<< Updated upstream
 		var bullet_instance = bullet.instantiate()
 		bullet_instance.position = global_position
 		bullet_instance.rotation_degrees = rotation_degrees
 		bullet_instance.velocity = Vector2(bullet_speed, 0).rotated(rotation)
 		get_tree().get_root().add_child(bullet_instance)
-=======
-func swapper()->void: #Swaps between gun and hook (Hook features not added yet)
-	if Input.is_action_just_pressed("swap"):
-		if mode == 0:
-			mode = 1
-		elif mode == 1:
-			mode = 0
+#func swapper()->void: #Swaps between gun and hook (Hook features not added yet)
+	#if Input.is_action_just_pressed("swap"):
+		#if mode == 0:
+			#mode = 1
+		#elif mode == 1:
+			#mode = 0
 			
->>>>>>> Stashed changes

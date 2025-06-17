@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://da4xgo4live2m"]
+[gd_scene load_steps=7 format=3 uid="uid://da4xgo4live2m"]
 
 [ext_resource type="Texture2D" uid="uid://btok5fedg40pc" path="res://Images/icon.svg" id="1_la1h0"]
 [ext_resource type="Script" uid="uid://drit8j0w4isri" path="res://Scripts/player.gd" id="1_xa75v"]
 [ext_resource type="PackedScene" uid="uid://djpw5kgylb3s2" path="res://Scene/playerui.tscn" id="3_wv00g"]
+[ext_resource type="PackedScene" uid="uid://cn1ic3bdl375r" path="res://Scene/gun.tscn" id="4_58ae2"]
+[ext_resource type="PackedScene" uid="uid://cg2ua5nuds4gi" path="res://Scene/grapple.tscn" id="5_ivevv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yx0hs"]
 size = Vector2(125, 130)
@@ -23,3 +25,9 @@ offset_left = -575.0
 offset_top = -323.0
 offset_right = -575.0
 offset_bottom = -323.0
+
+[node name="Gun" parent="." instance=ExtResource("4_58ae2")]
+scale = Vector2(0.5, 0.5)
+
+[node name="Grapple" parent="Gun" instance=ExtResource("5_ivevv")]
+position = Vector2(324, -20)

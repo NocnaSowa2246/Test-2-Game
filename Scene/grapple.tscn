@@ -2,10 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dlt1vo5adbw2u" path="res://Scripts/grapple_code.gd" id="1_cofiy"]
 
-[node name="Grapple" type="Node2D"]
-script = ExtResource("1_cofiy")
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
+[node name="Grapple" type="RayCast2D"]
 target_position = Vector2(10000, 0)
-
-[connection signal="draw" from="RayCast2D" to="." method="_on_ray_cast_2d_draw"]
+script = ExtResource("1_cofiy")

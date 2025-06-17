@@ -1,12 +1,21 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=6 format=3 uid="uid://b7vo7m23ny7mv"]
+=======
+[gd_scene load_steps=7 format=3 uid="uid://b7vo7m23ny7mv"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_emx41"]
 [ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/player.tscn" id="2_dlwip"]
 [ext_resource type="PackedScene" uid="uid://cn1ic3bdl375r" path="res://Scene/gun.tscn" id="3_ejll3"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://balms1q21ge0m" path="res://monster.tscn" id="4_scul4"]
+=======
+[ext_resource type="Texture2D" uid="uid://crwpoc1m75tsx" path="res://Images/steve2.jpg" id="5_37axr"]
+[ext_resource type="Script" uid="uid://sf2tshdho5fd" path="res://Scene/steve_2.gd" id="6_ol2hl"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlwip"]
-size = Vector2(1143, 225)
+size = Vector2(1127.9, 228.625)
 
 [node name="world" type="Node2D"]
 
@@ -19,7 +28,8 @@ scale = Vector2(5.06667, 1)
 texture = ExtResource("1_emx41")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(205.5, -33)
+position = Vector2(199.199, -33.5)
+scale = Vector2(1.01108, 0.999082)
 shape = SubResource("RectangleShape2D_dlwip")
 
 [node name="Player" parent="." instance=ExtResource("2_dlwip")]
@@ -28,5 +38,15 @@ position = Vector2(572, 348)
 [node name="Gun" parent="Player" instance=ExtResource("3_ejll3")]
 scale = Vector2(0.5, 0.5)
 
+<<<<<<< Updated upstream
 [node name="Monster" parent="." instance=ExtResource("4_scul4")]
 position = Vector2(1029, 264)
+=======
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="Steve2" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(229, 164)
+scale = Vector2(1.68, 0.26)
+texture = ExtResource("5_37axr")
+script = ExtResource("6_ol2hl")
+>>>>>>> Stashed changes

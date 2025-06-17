@@ -2,19 +2,33 @@ extends CharacterBody2D
 
 @onready var gun = $Gun
 @onready var grapple_hook = $Gun/Grapple
+var hook = preload("res://Scene/hook.tscn")
 const SPEED = 300.00
+var hook_p = 0
 const JUMP_VELOCITY = -500.0
 var grappling = 0
 
 
 func _physics_process(delta: float) -> void:
 	if gun.mode == 0 and Input.is_action_just_pressed("shoot") and grappling == 0:
+		hook_p = 0
+		var hook_instance = hook.instantiate()
+		hook_instance.position = grapple_hook.global_position
+		hook_instance.rotation_degrees = rotation_degrees
+		hook_instance.velocity = Vector2(1000, 0).rotated(gun.rotation)
+		get_tree().get_root().add_child(hook_instance)
+		var hook_pos = hook_instance.position
 		var ray_point = grapple_hook.get_collision_point()
-		while global_position != grapple_hook.ray_point:
+		#move player towards hook bullet
+		while global_position != hook_instance.global_position and global_position.distance_to(hook_instance.global_position) > 60:
 			grappling = 1
-			global_position = global_position.move_toward(ray_point, delta*SPEED)
+			print(global_position.distance_to(hook_instance.global_position))
+			global_position = global_position.move_toward(hook_instance.global_position, delta*SPEED)
 			await get_tree().create_timer(.001).timeout
+		global_position = global_position
 		grappling = 0
+		await get_tree().create_timer(3.0).timeout #Might want to change later
+		hook_p = 1
 			
 	# Add the gravity.
 	if not is_on_floor() and grappling == 0:
@@ -25,7 +39,6 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
 	if direction and grappling == 0:
 		velocity.x = direction * SPEED

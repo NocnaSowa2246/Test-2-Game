@@ -30,18 +30,7 @@ func _process(delta: float) -> void:
 			ammo = ammo - 1
 			stash = stash - 1
 			
-	if Input.is_action_just_pressed("shoot") and mode==0 and hook_p == 1:
-		hook_p = 0
-		var hook_instance = hook.instantiate()
-		hook_instance.position = tip.global_position
-		hook_instance.rotation_degrees = rotation_degrees
-		hook_instance.velocity = Vector2(bullet_speed, 0).rotated(rotation)
-		get_tree().get_root().add_child(hook_instance)
-		await get_tree().create_timer(3.0).timeout #Might want to change later
-		hook_p = 1
-		var ray_point = hook_instance.get_collision_point()
-		if ray_point:
-			hook_instance.velocity = Vector2(0, 0).rotated(rotation)
+	
 
 func reload()-> void:
 	await get_tree().create_timer(3.0).timeout

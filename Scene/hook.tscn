@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnhq3ufd307t2"]
+[gd_scene load_steps=4 format=3 uid="uid://bnhq3ufd307t2"]
 
 [ext_resource type="Texture2D" uid="uid://cal28sud8bwgm" path="res://Images/bullet.png" id="1_rfb3s"]
 [ext_resource type="Script" uid="uid://ci18a0sbk86ro" path="res://Scene/hook.gd" id="1_yb34w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yb34w"]
+size = Vector2(134, 96)
 
 [node name="hook" type="CharacterBody2D"]
 scale = Vector2(0.25, 0.25)
@@ -11,8 +14,9 @@ script = ExtResource("1_yb34w")
 texture = ExtResource("1_rfb3s")
 
 [node name="Bullet2" type="Sprite2D" parent="."]
-position = Vector2(-2, 51)
 texture = ExtResource("1_rfb3s")
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
-target_position = Vector2(180, 0)
+[node name="area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area"]
+shape = SubResource("RectangleShape2D_yb34w")

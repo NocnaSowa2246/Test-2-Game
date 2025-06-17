@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://owrqepcasp0i"]
+
+[ext_resource type="Texture2D" uid="uid://cex5d0gw516go" path="res://Images/mariowalk1.png" id="1_4pctl"]
+[ext_resource type="Script" uid="uid://bi2ctl1fpb7f4" path="res://Scene/zombie.gd" id="1_g2f0o"]
+[ext_resource type="Texture2D" uid="uid://bqqcq807pwbwa" path="res://Images/mariowalk2.png" id="2_g2f0o"]
+[ext_resource type="Texture2D" uid="uid://fbrxmy3sw0x7" path="res://Scene/mariodeath.png" id="2_ueq02"]
+[ext_resource type="Texture2D" uid="uid://c1q4wqbnu6qmk" path="res://Images/mariowalk3.png" id="3_ueq02"]
+[ext_resource type="Script" uid="uid://dx1v4ca6i77ib" path="res://area_2d.gd" id="4_vyth4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dicts"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ueq02")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4pctl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g2f0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ueq02")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5h45"]
+size = Vector2(15, 16)
+
+[node name="Zombie" type="Node2D"]
+script = ExtResource("1_g2f0o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_dicts")
+animation = &"death"
+autoplay = "walk"
+
+[node name="Death Area" type="Area2D" parent="."]
+script = ExtResource("4_vyth4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death Area"]
+shape = SubResource("RectangleShape2D_m5h45")
+
+[node name="Timer" type="Timer" parent="Death Area"]
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(8, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-7, 0)

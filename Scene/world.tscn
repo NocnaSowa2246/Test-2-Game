@@ -1,8 +1,18 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=5 format=3 uid="uid://b7vo7m23ny7mv"]
+=======
+[gd_scene load_steps=8 format=3 uid="uid://b7vo7m23ny7mv"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_emx41"]
 [ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/player.tscn" id="2_dlwip"]
 [ext_resource type="PackedScene" uid="uid://cn1ic3bdl375r" path="res://Scene/gun.tscn" id="3_ejll3"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="PackedScene" path="res://monster.tscn" id="4_scul4"]
+[ext_resource type="PackedScene" uid="uid://3b7x2rb2wc2j" path="res://Scene/rotation.tscn" id="5_pcvp0"]
+[ext_resource type="PackedScene" uid="uid://8yf231e8o7jg" path="res://Scene/solid_block.tscn" id="6_37axr"]
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlwip"]
 size = Vector2(1143, 225)
@@ -21,8 +31,86 @@ texture = ExtResource("1_emx41")
 position = Vector2(205.5, -33)
 shape = SubResource("RectangleShape2D_dlwip")
 
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(932, -143)
+scale = Vector2(0.2, 1)
+
+[node name="Steve" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(202, -34)
+scale = Vector2(5.06667, 1)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(205.5, -33)
+shape = SubResource("RectangleShape2D_dlwip")
+
 [node name="Player" parent="." instance=ExtResource("2_dlwip")]
 position = Vector2(572, 348)
 
 [node name="Gun" parent="Player" instance=ExtResource("3_ejll3")]
 scale = Vector2(0.5, 0.5)
+<<<<<<< Updated upstream
+=======
+
+[node name="Monster" parent="." instance=ExtResource("4_scul4")]
+position = Vector2(943, -441)
+
+[node name="Rotation" parent="." instance=ExtResource("5_pcvp0")]
+position = Vector2(-159, 363)
+
+[node name="Solid Block" parent="." instance=ExtResource("6_37axr")]
+position = Vector2(-6203, 385)
+scale = Vector2(9, 0.769)
+
+[node name="Solid Block" parent="Solid Block" instance=ExtResource("6_37axr")]
+position = Vector2(565.111, -591.678)
+scale = Vector2(0.499717, 0.628985)
+
+[node name="Solid Block2" parent="Solid Block" instance=ExtResource("6_37axr")]
+position = Vector2(461.333, 4723.02)
+rotation = -1.47316
+scale = Vector2(5.15361, 1.29709)
+skew = 1.39876
+
+[node name="Solid Block3" parent="Solid Block" instance=ExtResource("6_37axr")]
+position = Vector2(1022.67, -828.348)
+scale = Vector2(0.111111, 1.30039)
+
+[node name="Solid Block4" parent="Solid Block" instance=ExtResource("6_37axr")]
+position = Vector2(1094.44, -394.018)
+scale = Vector2(0.111111, 1.30039)
+
+[node name="Solid Block5" parent="Solid Block" instance=ExtResource("6_37axr")]
+position = Vector2(1067.44, -586.476)
+scale = Vector2(0.111111, 5.20156)
+
+[node name="Solid Block6" parent="Solid Block" instance=ExtResource("6_37axr")]
+position = Vector2(954.667, -1514.95)
+scale = Vector2(0.0555556, 1.30039)
+
+[node name="Solid Block7" parent="Solid Block" instance=ExtResource("6_37axr")]
+position = Vector2(1003.11, -1511.05)
+scale = Vector2(0.0555556, 1.30039)
+
+[node name="Solid Block8" parent="Solid Block" instance=ExtResource("6_37axr")]
+position = Vector2(1024.11, -1511.05)
+scale = Vector2(0.0555556, 1.30039)
+
+[node name="Solid Block9" parent="Solid Block" instance=ExtResource("6_37axr")]
+position = Vector2(954.667, -1200.26)
+scale = Vector2(0.0555556, 1.30039)
+
+[node name="Solid Block10" parent="Solid Block" instance=ExtResource("6_37axr")]
+position = Vector2(975.667, -1200.26)
+scale = Vector2(0.0555556, 1.30039)
+
+[node name="Solid Block11" parent="Solid Block" instance=ExtResource("6_37axr")]
+position = Vector2(1003.33, -1198.96)
+scale = Vector2(0.0555556, 1.30039)
+
+[node name="Solid Block12" parent="Solid Block" instance=ExtResource("6_37axr")]
+position = Vector2(1073.33, -501.95)
+rotation = -1.57117
+scale = Vector2(0.650189, 0.111257)
+skew = -0.0511137
+>>>>>>> Stashed changes

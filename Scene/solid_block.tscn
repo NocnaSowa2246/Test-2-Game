@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://8yf231e8o7jg"]
+
+[ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_7ncqb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_go8cx"]
+size = Vector2(1143, 225)
+
+[node name="Solid Block" type="Node2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(895, 46)
+scale = Vector2(0.2, 1)
+
+[node name="Steve" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(202, -34)
+scale = Vector2(5.06667, 1)
+texture = ExtResource("1_7ncqb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(205.5, -33)
+shape = SubResource("RectangleShape2D_go8cx")

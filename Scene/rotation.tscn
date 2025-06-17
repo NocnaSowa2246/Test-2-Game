@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://3b7x2rb2wc2j"]
+
+[ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_gwbs1"]
+[ext_resource type="Script" path="res://steve.gd" id="2_627mh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7frks"]
+size = Vector2(1143, 225)
+
+[node name="Rotation" type="Node2D"]
+position = Vector2(-10, 35)
+scale = Vector2(0.141599, 0.92822)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-13.2171, -0.973119)
+
+[node name="Steve" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(202, -34)
+scale = Vector2(5.06667, 1)
+texture = ExtResource("1_gwbs1")
+script = ExtResource("2_627mh")
+
+[node name="Timer" type="Timer" parent="StaticBody2D/Steve"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(205.5, -33)
+shape = SubResource("RectangleShape2D_7frks")

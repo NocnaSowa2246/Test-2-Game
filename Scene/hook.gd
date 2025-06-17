@@ -1,6 +1,5 @@
 extends CharacterBody2D
 @onready var ray = $area
-@onready var tip = $"../Grapple"
 var hook_p = 0
 var wall = false
 

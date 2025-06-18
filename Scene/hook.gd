@@ -2,7 +2,6 @@ extends CharacterBody2D
 @onready var ray = $area
 var hook_p = 0
 var wall = false
-var timeout = false
 
 func _physics_process(delta: float) -> void:
 	var overlaps = ray.get_overlapping_bodies()

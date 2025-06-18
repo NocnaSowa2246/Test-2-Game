@@ -22,7 +22,7 @@ func _physics_process(delta: float) -> void:
 		while global_position != hook_instance.global_position and global_position.distance_to(hook_instance.global_position) > 100:
 			grappling = 1
 			print(global_position.distance_to(hook_instance.global_position))
-			global_position = global_position.move_toward(hook_instance.global_position, delta*SPEED)
+			global_position = global_position.move_toward(hook_instance.global_position, delta*1050)
 			await get_tree().create_timer(.001).timeout
 		grappling = 0
 		hook_instance.free()

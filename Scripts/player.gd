@@ -1,16 +1,14 @@
 extends CharacterBody2D
 
 
-<<<<<<< Updated upstream
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-=======
 const SPEED = 500.0
 const JUMP_VELOCITY = -550.0
 @onready var damage = $Defend
 @onready var ui = $Camera2D/playerui
->>>>>>> Stashed changes
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

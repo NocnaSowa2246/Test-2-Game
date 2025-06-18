@@ -34,8 +34,8 @@ func _physics_process(delta: float) -> void:
 			await get_tree().create_timer(.001).timeout
 			if timeout==0:
 				timeout=5
-				if is_instance_valid(hook_instance):
-					hook_instance.queue_free()
+			
+					
 		grappling = 0
 		await get_tree().create_timer(3.0).timeout #Might want to change later
 		hook_p = 1

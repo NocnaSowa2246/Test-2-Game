@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2tsu3ut33763"]
+
+[ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_ku8d5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iesyn"]
+size = Vector2(1143, 225)
+
+[node name="Solid" type="StaticBody2D"]
+position = Vector2(1, 1)
+scale = Vector2(0.2, 1)
+
+[node name="Steve" type="Sprite2D" parent="."]
+position = Vector2(202, -34)
+scale = Vector2(5.06667, 1)
+texture = ExtResource("1_ku8d5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(205.5, -33)
+shape = SubResource("RectangleShape2D_iesyn")

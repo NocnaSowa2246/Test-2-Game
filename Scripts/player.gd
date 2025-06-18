@@ -9,8 +9,6 @@ const JUMP_VELOCITY = -500.0
 var grappling = 0
 
 func _physics_process(delta: float) -> void:
-	
-	
 	if gun.mode == 0 and Input.is_action_just_pressed("shoot") and grappling == 0:
 		hook_p = 0
 		var hook_instance = hook.instantiate()
@@ -27,6 +25,7 @@ func _physics_process(delta: float) -> void:
 			global_position = global_position.move_toward(hook_instance.global_position, delta*SPEED)
 			await get_tree().create_timer(.001).timeout
 		grappling = 0
+		hook_instance.free()
 		await get_tree().create_timer(3.0).timeout #Might want to change later
 		hook_p = 1
 			

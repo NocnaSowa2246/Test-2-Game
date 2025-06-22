@@ -1,10 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7vo7m23ny7mv"]
+[gd_scene load_steps=15 format=3 uid="uid://b7vo7m23ny7mv"]
 
 [ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_emx41"]
 [ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/player.tscn" id="2_dlwip"]
+[ext_resource type="Texture2D" uid="uid://blmfh8tfvkvi0" path="res://Images/pillar_sprite_sheet 64_128_max.png" id="3_ejll3"]
+[ext_resource type="Texture2D" uid="uid://cradrxamcldyy" path="res://Images/pngegg.png" id="4_scul4"]
+[ext_resource type="Texture2D" uid="uid://diyq3kncv77v6" path="res://Images/right-arrow.png" id="5_pcvp0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlwip"]
-size = Vector2(1143, 225)
+size = Vector2(1139.89, 223.966)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejll3"]
+size = Vector2(1503.25, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_scul4"]
+size = Vector2(1502, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ol2hl"]
+size = Vector2(812, 351)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pcvp0"]
+size = Vector2(821.75, 358.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37axr"]
+size = Vector2(820.75, 1069.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddf65"]
+size = Vector2(1471.08, 323.76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7cfj"]
+size = Vector2(2084.25, 384)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y56vo"]
+size = Vector2(3999, 404)
 
 [node name="world" type="Node2D"]
 
@@ -21,17 +48,160 @@ scale = Vector2(5.06667, 1)
 texture = ExtResource("1_emx41")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
-position = Vector2(200, -33)
+position = Vector2(201.94, -37.3276)
 shape = SubResource("RectangleShape2D_dlwip")
 
 [node name="wall2" type="StaticBody2D" parent="."]
 position = Vector2(334, 671)
 
 [node name="Steve" type="Sprite2D" parent="wall2"]
-position = Vector2(1432, -376)
-scale = Vector2(5.06667, 1)
+position = Vector2(1566, -379)
+scale = Vector2(6.68, 0.22)
 texture = ExtResource("1_emx41")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="wall2"]
-position = Vector2(1433, -376)
-shape = SubResource("RectangleShape2D_dlwip")
+position = Vector2(1566, -379)
+shape = SubResource("RectangleShape2D_ejll3")
+
+[node name="wall3" type="StaticBody2D" parent="."]
+position = Vector2(334, 671)
+
+[node name="Steve" type="Sprite2D" parent="wall3"]
+position = Vector2(1567, -673)
+scale = Vector2(6.68, 0.22)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall3"]
+position = Vector2(1567, -673)
+shape = SubResource("RectangleShape2D_scul4")
+
+[node name="wall4" type="StaticBody2D" parent="."]
+position = Vector2(334, 671)
+
+[node name="Steve" type="Sprite2D" parent="wall4"]
+position = Vector2(2723.13, -823)
+scale = Vector2(3.59889, 1.55889)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall4"]
+position = Vector2(2722, -824.5)
+shape = SubResource("RectangleShape2D_ol2hl")
+
+[node name="wall5" type="StaticBody2D" parent="."]
+position = Vector2(334, 671)
+
+[node name="Steve" type="Sprite2D" parent="wall5"]
+position = Vector2(2638, -227)
+scale = Vector2(4.37278, 1.58833)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall5"]
+position = Vector2(2718, -224.063)
+shape = SubResource("RectangleShape2D_pcvp0")
+
+[node name="wall6" type="StaticBody2D" parent="."]
+position = Vector2(334, 671)
+
+[node name="Steve" type="Sprite2D" parent="wall6"]
+position = Vector2(-770, -583.5)
+scale = Vector2(3.63333, 4.72444)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall6"]
+position = Vector2(-773.375, -579.75)
+shape = SubResource("RectangleShape2D_37axr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1423, 442.375)
+scale = Vector2(1.54348, 3.99194)
+texture = ExtResource("3_ejll3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(2057, 441.875)
+scale = Vector2(1.54348, 3.98118)
+texture = ExtResource("3_ejll3")
+
+[node name="wall7" type="StaticBody2D" parent="."]
+position = Vector2(334, 671)
+
+[node name="Steve" type="Sprite2D" parent="wall7"]
+position = Vector2(3739.01, -1066.86)
+rotation = 2.77793
+scale = Vector2(6.61582, 1.37702)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall7"]
+position = Vector2(3751, -1070)
+rotation = -0.378731
+shape = SubResource("RectangleShape2D_ddf65")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(3891, 505)
+scale = Vector2(1, 0.562)
+texture = ExtResource("4_scul4")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(4598, 502)
+scale = Vector2(1, 0.562)
+texture = ExtResource("4_scul4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 121.0
+offset_top = 326.0
+offset_right = 941.0
+offset_bottom = 452.0
+theme_override_font_sizes/font_size = 46
+text = "Press F to switch to grapple and back"
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(936, 212)
+rotation = -0.419818
+scale = Vector2(0.478746, 0.223184)
+texture = ExtResource("5_pcvp0")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 3001.0
+offset_top = 71.0
+offset_right = 3484.0
+offset_bottom = 166.0
+rotation = -0.0172763
+theme_override_font_sizes/font_size = 33
+text = "Be careful of dangorus objects
+See if you can grapple across"
+
+[node name="wall8" type="StaticBody2D" parent="."]
+position = Vector2(334, 671)
+
+[node name="Steve" type="Sprite2D" parent="wall8"]
+position = Vector2(5407, -1330)
+scale = Vector2(9.26166, 1.67222)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall8"]
+position = Vector2(5406.88, -1326)
+shape = SubResource("RectangleShape2D_h7cfj")
+
+[node name="wall9" type="StaticBody2D" parent="."]
+position = Vector2(334, 671)
+
+[node name="Steve" type="Sprite2D" parent="wall9"]
+position = Vector2(6746.52, -247)
+scale = Vector2(17.7732, 1.79611)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall9"]
+position = Vector2(6746.5, -247)
+shape = SubResource("RectangleShape2D_y56vo")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 2263.0
+offset_top = 372.0
+offset_right = 2528.0
+offset_bottom = 464.0
+text = "Insert Secret Chest Here"
+
+[node name="Sprite2D" type="Sprite2D" parent="Label3"]
+position = Vector2(299, 61)
+rotation = 1.5526
+scale = Vector2(0.341797, 0.193359)
+texture = ExtResource("5_pcvp0")

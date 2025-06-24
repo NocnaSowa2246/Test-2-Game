@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_emx41"]
 [ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/player.tscn" id="2_dlwip"]
 [ext_resource type="Texture2D" uid="uid://blmfh8tfvkvi0" path="res://Images/pillar_sprite_sheet 64_128_max.png" id="3_ejll3"]
-[ext_resource type="Texture2D" uid="uid://cradrxamcldyy" path="res://Images/pngegg.png" id="4_scul4"]
+[ext_resource type="PackedScene" uid="uid://d03cvfakgg4ma" path="res://Scene/rockofDOOM.tscn" id="5_37axr"]
 [ext_resource type="Texture2D" uid="uid://diyq3kncv77v6" path="res://Images/right-arrow.png" id="5_pcvp0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlwip"]
@@ -138,16 +138,6 @@ position = Vector2(3751, -1070)
 rotation = -0.378731
 shape = SubResource("RectangleShape2D_ddf65")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(3891, 505)
-scale = Vector2(1, 0.562)
-texture = ExtResource("4_scul4")
-
-[node name="Sprite2D4" type="Sprite2D" parent="."]
-position = Vector2(4598, 502)
-scale = Vector2(1, 0.562)
-texture = ExtResource("4_scul4")
-
 [node name="Label" type="Label" parent="."]
 offset_left = 5177.0
 offset_top = -27.0
@@ -217,6 +207,7 @@ offset_bottom = 469.0
 theme_override_font_sizes/font_size = 42
 text = "Press Left Mouse To Fire Gtapple"
 
+<<<<<<< Updated upstream
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -227,3 +218,19 @@ shape = SubResource("RectangleShape2D_6a5p4")
 position = Vector2(-19.5, 7.62939e-06)
 scale = Vector2(11.8956, 0.508889)
 texture = ExtResource("1_emx41")
+=======
+[node name="RockofDoom" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(3682, 625)
+
+[node name="RockofDoom2" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(3955, 628)
+
+[node name="RockofDoom3" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4225, 628)
+
+[node name="RockofDoom4" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4535, 630)
+
+[node name="RockofDoom5" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4874, 624)
+>>>>>>> Stashed changes

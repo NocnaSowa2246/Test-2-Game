@@ -208,6 +208,7 @@ theme_override_font_sizes/font_size = 42
 text = "Press Left Mouse To Fire Gtapple"
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -219,6 +220,8 @@ position = Vector2(-19.5, 7.62939e-06)
 scale = Vector2(11.8956, 0.508889)
 texture = ExtResource("1_emx41")
 =======
+=======
+>>>>>>> Stashed changes
 [node name="RockofDoom" parent="." instance=ExtResource("5_37axr")]
 position = Vector2(3682, 625)
 
@@ -233,4 +236,7 @@ position = Vector2(4535, 630)
 
 [node name="RockofDoom5" parent="." instance=ExtResource("5_37axr")]
 position = Vector2(4874, 624)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

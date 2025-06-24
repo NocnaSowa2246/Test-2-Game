@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b7vo7m23ny7mv"]
+[gd_scene load_steps=14 format=3 uid="uid://b7vo7m23ny7mv"]
 
 [ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_emx41"]
 [ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/player.tscn" id="2_dlwip"]
@@ -31,9 +31,6 @@ size = Vector2(2084.25, 384)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y56vo"]
 size = Vector2(3999, 404)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6a5p4"]
-size = Vector2(2715, 122)
 
 [node name="world" type="Node2D"]
 
@@ -205,5 +202,3 @@ offset_right = 957.0
 offset_bottom = 469.0
 theme_override_font_sizes/font_size = 42
 text = "Press Left Mouse To Fire Gtapple"
-
-

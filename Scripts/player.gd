@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var gun = $Gun
 @onready var grapple_hook = $Gun/Grapple
 var hook = preload("res://Scene/hook.tscn")
-const SPEED = 300.00
+const SPEED = 500.00
 var hook_p = 0
 const JUMP_VELOCITY = -500.0
 var grappling = 0

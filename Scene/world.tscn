@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b7vo7m23ny7mv"]
+[gd_scene load_steps=16 format=3 uid="uid://b7vo7m23ny7mv"]
 
 [ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_emx41"]
 [ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/player.tscn" id="2_dlwip"]
@@ -33,10 +33,13 @@ size = Vector2(2084.25, 384)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y56vo"]
 size = Vector2(3999, 404)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6a5p4"]
+size = Vector2(2715, 122)
+
 [node name="world" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_dlwip")]
-position = Vector2(572, 348)
+position = Vector2(651, 477)
 
 [node name="wall" type="StaticBody2D" parent="."]
 position = Vector2(372, 635)
@@ -207,9 +210,20 @@ scale = Vector2(0.341797, 0.193359)
 texture = ExtResource("5_pcvp0")
 
 [node name="Label4" type="Label" parent="."]
-offset_left = 251.0
-offset_top = 344.0
-offset_right = 915.0
-offset_bottom = 507.0
+offset_left = 293.0
+offset_top = 306.0
+offset_right = 957.0
+offset_bottom = 469.0
 theme_override_font_sizes/font_size = 42
 text = "Press Left Mouse To Fire Gtapple"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1326.5, -382)
+shape = SubResource("RectangleShape2D_6a5p4")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
+position = Vector2(-19.5, 7.62939e-06)
+scale = Vector2(11.8956, 0.508889)
+texture = ExtResource("1_emx41")

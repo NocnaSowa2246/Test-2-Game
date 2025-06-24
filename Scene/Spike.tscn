@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://coxm62gry3tak"]
+
+[ext_resource type="Texture2D" uid="uid://bjxkm7qhxvn3h" path="res://Images/spikes.png" id="2_lmus8"]
+[ext_resource type="PackedScene" uid="uid://wp5i8p48hu6x" path="res://Scripts/killzone.tscn" id="3_qqsuc"]
+
+[sub_resource type="GDScript" id="GDScript_ia8si"]
+script/source = "extends Area2D
+
+@onready var timer: Timer = $Timer
+
+func _on_body_entered(body: Node2D) -> void:
+	print(\"You died!\")
+	timer.start()
+
+
+func _on_timer_timeout() -> void:
+	Engine.time_scale = 1.0
+	get_tree().reload_current_scene()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wussq"]
+size = Vector2(66, 168)
+
+[node name="Spike" type="Area2D"]
+script = SubResource("GDScript_ia8si")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(0, -103.5)
+scale = Vector2(6, 6.46875)
+texture = ExtResource("2_lmus8")
+
+[node name="Killzone" parent="." instance=ExtResource("3_qqsuc")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, -84)
+shape = SubResource("RectangleShape2D_wussq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -13,6 +13,7 @@ size = Vector2(125, 130)
 script = ExtResource("1_xa75v")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
 texture = ExtResource("1_la1h0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -27,6 +28,7 @@ offset_right = -575.0
 offset_bottom = -323.0
 
 [node name="Gun" parent="." instance=ExtResource("4_58ae2")]
+z_index = 6
 scale = Vector2(0.5, 0.5)
 
 [node name="Grapple" parent="Gun" instance=ExtResource("5_ivevv")]

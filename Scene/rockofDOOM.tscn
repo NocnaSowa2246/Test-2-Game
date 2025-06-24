@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=4 format=3 uid="uid://ccrwc3swldta2"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://d03cvfakgg4ma"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" uid="uid://xg6jylwspvwn" path="res://Scripts/rockof_doom.gd" id="1_pw7m4"]
 [ext_resource type="Texture2D" uid="uid://cradrxamcldyy" path="res://Images/pngegg.png" id="2_jyxik"]

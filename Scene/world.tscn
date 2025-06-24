@@ -146,12 +146,12 @@ scale = Vector2(1, 0.562)
 texture = ExtResource("4_scul4")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 121.0
-offset_top = 326.0
-offset_right = 941.0
-offset_bottom = 452.0
+offset_left = 5177.0
+offset_top = -27.0
+offset_right = 5997.0
+offset_bottom = 99.0
 theme_override_font_sizes/font_size = 46
-text = "Press F to switch to grapple and back"
+text = "Press F to switch to gun and back"
 
 [node name="Sprite2D5" type="Sprite2D" parent="."]
 position = Vector2(936, 212)
@@ -205,3 +205,11 @@ position = Vector2(299, 61)
 rotation = 1.5526
 scale = Vector2(0.341797, 0.193359)
 texture = ExtResource("5_pcvp0")
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 251.0
+offset_top = 344.0
+offset_right = 915.0
+offset_bottom = 507.0
+theme_override_font_sizes/font_size = 42
+text = "Press Left Mouse To Fire Gtapple"

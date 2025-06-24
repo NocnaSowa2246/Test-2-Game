@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://b7vo7m23ny7mv"]
+[gd_scene load_steps=15 format=3 uid="uid://b7vo7m23ny7mv"]
 
 [ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_emx41"]
 [ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/player.tscn" id="2_dlwip"]
 [ext_resource type="Texture2D" uid="uid://blmfh8tfvkvi0" path="res://Images/pillar_sprite_sheet 64_128_max.png" id="3_ejll3"]
+[ext_resource type="PackedScene" uid="uid://thkrxgdmwpb" path="res://Scene/Spike.tscn" id="5_37axr"]
 [ext_resource type="Texture2D" uid="uid://diyq3kncv77v6" path="res://Images/right-arrow.png" id="5_pcvp0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlwip"]
@@ -202,3 +203,34 @@ offset_right = 957.0
 offset_bottom = 469.0
 theme_override_font_sizes/font_size = 42
 text = "Press Left Mouse To Fire Gtapple"
+
+[node name="Spike" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(3562, 615)
+
+[node name="Spike2" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(3704, 616)
+
+[node name="Spike3" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(3877, 616)
+
+[node name="Spike4" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4020, 616)
+
+[node name="Spike5" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4161, 616)
+
+[node name="Spike6" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4316, 621)
+monitorable = false
+
+[node name="Spike7" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4485, 619)
+
+[node name="Spike8" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4636, 619)
+
+[node name="Spike9" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4793, 626)
+
+[node name="Spike10" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4957, 622)

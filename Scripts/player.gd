@@ -10,6 +10,7 @@ var grappling = 0
 
 func _physics_process(delta: float) -> void:
 	if gun.mode == 0 and Input.is_action_just_pressed("shoot") and grappling == 0:
+		var timer = get_tree().create_timer(5).timeout
 		hook_p = 0
 		var hook_instance = hook.instantiate()
 		hook_instance.position = grapple_hook.global_position
@@ -24,7 +25,7 @@ func _physics_process(delta: float) -> void:
 			print(global_position.distance_to(hook_instance.global_position))
 			global_position = global_position.move_toward(hook_instance.global_position, delta*1050)
 			await get_tree().create_timer(.001).timeout
-			if hook_instance.position.y > 700 or hook_instance.position.y < -700:
+			if hook_instance.position.y > 700 or hook_instance.position.y < -700 or timer:
 				hook_instance.queue_free()
 				break
 		grappling = 0

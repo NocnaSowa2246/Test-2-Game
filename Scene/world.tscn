@@ -207,6 +207,18 @@ text = "Press Left Mouse To Fire Gtapple"
 [node name="Spike" parent="." instance=ExtResource("5_37axr")]
 position = Vector2(3760, 619)
 
+[node name="Spike18" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(3831, 619)
+
+[node name="Spike19" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(3708, 617)
+
+[node name="Spike20" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(3632, 619)
+
+[node name="Spike21" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(3558, 619)
+
 [node name="Spike2" parent="." instance=ExtResource("5_37axr")]
 position = Vector2(3904, 619)
 
@@ -217,13 +229,40 @@ position = Vector2(4048, 619)
 position = Vector2(4192, 619)
 
 [node name="Spike5" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4336, 619)
+position = Vector2(4342, 618)
 
 [node name="Spike6" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4480, 619)
+position = Vector2(4503, 616)
+
+[node name="Spike13" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(3987, 612)
+
+[node name="Spike14" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4126, 614)
+
+[node name="Spike15" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4270, 616)
+
+[node name="Spike16" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4433, 619)
+
+[node name="Spike17" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4575, 619)
 
 [node name="Spike7" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4624, 619)
+position = Vector2(4645, 619)
+
+[node name="Spike11" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4793, 617)
+
+[node name="Spike12" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4711, 619)
 
 [node name="Spike8" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4768, 619)
+position = Vector2(4858, 619)
+
+[node name="Spike9" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(5003, 621)
+
+[node name="Spike10" parent="." instance=ExtResource("5_37axr")]
+position = Vector2(4942, 621)

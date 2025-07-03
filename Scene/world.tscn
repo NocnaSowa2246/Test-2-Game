@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://b7vo7m23ny7mv"]
+[gd_scene load_steps=16 format=3 uid="uid://b7vo7m23ny7mv"]
 
 [ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_emx41"]
 [ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/player.tscn" id="2_dlwip"]
 [ext_resource type="Texture2D" uid="uid://blmfh8tfvkvi0" path="res://Images/pillar_sprite_sheet 64_128_max.png" id="3_ejll3"]
 [ext_resource type="PackedScene" uid="uid://b60t3bvkv5sba" path="res://Scene/Spike.tscn" id="5_37axr"]
 [ext_resource type="Texture2D" uid="uid://diyq3kncv77v6" path="res://Images/right-arrow.png" id="5_pcvp0"]
+[ext_resource type="Texture2D" uid="uid://bn4hiw6yf0vhc" path="res://Images/blackdoor.png" id="6_37axr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlwip"]
 size = Vector2(1139.89, 223.966)
@@ -143,6 +144,17 @@ offset_bottom = 99.0
 theme_override_font_sizes/font_size = 46
 text = "Press F to switch to gun and back"
 
+[node name="Label" type="Label" parent="Label"]
+offset_left = 2653.0
+offset_top = -88.0
+offset_right = 3473.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 46
+text = "Tutorial complete!
+Enter the door to begin.
+Good luck!"
+horizontal_alignment = 1
+
 [node name="Sprite2D5" type="Sprite2D" parent="."]
 position = Vector2(936, 212)
 rotation = -0.419818
@@ -160,7 +172,8 @@ text = "Be careful of dangorus objects
 See if you can grapple across"
 
 [node name="wall8" type="StaticBody2D" parent="."]
-position = Vector2(334, 671)
+position = Vector2(-3889, 634)
+scale = Vector2(1.99593, 1.01664)
 
 [node name="Steve" type="Sprite2D" parent="wall8"]
 position = Vector2(5407, -1330)
@@ -266,3 +279,21 @@ position = Vector2(5003, 621)
 
 [node name="Spike10" parent="." instance=ExtResource("5_37axr")]
 position = Vector2(4942, 621)
+
+[node name="wall10" type="StaticBody2D" parent="."]
+position = Vector2(8548, 5186)
+scale = Vector2(0.1, 4)
+
+[node name="Steve" type="Sprite2D" parent="wall10"]
+position = Vector2(5407, -1330)
+scale = Vector2(9.26166, 1.67222)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall10"]
+position = Vector2(5406.88, -1326)
+shape = SubResource("RectangleShape2D_h7cfj")
+
+[node name="Blackdoor" type="Sprite2D" parent="."]
+position = Vector2(8785, 30)
+scale = Vector2(12, 12)
+texture = ExtResource("6_37axr")

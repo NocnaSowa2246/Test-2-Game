@@ -51,3 +51,9 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
+func _process(float):
+	if position.x > 8689:
+		if position.x < 8881:
+			if position.y > -162:
+				if position.y < 222:
+					get_tree().change_scene_to_file("res://Scene/world_2.tscn")

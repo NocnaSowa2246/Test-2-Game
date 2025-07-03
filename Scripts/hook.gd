@@ -11,5 +11,4 @@ func _physics_process(delta: float) -> void:
 		wall = true
 	else:
 		wall = false
-		
 	move_and_slide()

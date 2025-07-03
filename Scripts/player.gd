@@ -9,7 +9,7 @@ const JUMP_VELOCITY = -500.0
 var grappling = 0
 
 func _physics_process(delta: float) -> void:
-	if gun.mode == 0 and Input.is_action_just_pressed("shoot") and grappling == 0:
+	if gun.mode == 0 and Input.is_action_just_pressed("shoot") and grappling == 0 and grapple_hook.cast == 1:
 		hook_p = 0
 		var hook_instance = hook.instantiate()
 		hook_instance.position = grapple_hook.global_position

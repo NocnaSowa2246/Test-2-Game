@@ -9,17 +9,32 @@ size = Vector2(1139.89, 223.966)
 [node name="world2" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_ys6d5")]
-position = Vector2(651, 477)
+position = Vector2(-486, 864)
 
-[node name="wall" type="StaticBody2D" parent="."]
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="wall" type="StaticBody2D" parent="Walls"]
 position = Vector2(1, 1382)
 scale = Vector2(3, 3)
 
-[node name="Steve" type="Sprite2D" parent="wall"]
+[node name="Steve" type="Sprite2D" parent="Walls/wall"]
 position = Vector2(202, -34)
 scale = Vector2(5.06667, 1)
 texture = ExtResource("2_0iv11")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall"]
+position = Vector2(201.94, -37.3276)
+shape = SubResource("RectangleShape2D_d0jha")
+
+[node name="wall2" type="StaticBody2D" parent="Walls"]
+position = Vector2(27, -232)
+scale = Vector2(3, 3)
+
+[node name="Steve" type="Sprite2D" parent="Walls/wall2"]
+position = Vector2(202, -34)
+scale = Vector2(5.06667, 1)
+texture = ExtResource("2_0iv11")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall2"]
 position = Vector2(201.94, -37.3276)
 shape = SubResource("RectangleShape2D_d0jha")

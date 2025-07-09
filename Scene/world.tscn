@@ -261,7 +261,7 @@ offset_top = -27.0
 offset_right = 5997.0
 offset_bottom = 99.0
 theme_override_font_sizes/font_size = 46
-text = "Press F to switch to gun and back"
+text = "Press F to switch between hook mode and gun mode."
 
 [node name="Label2" type="Label" parent="Labels"]
 offset_left = 3001.0
@@ -270,15 +270,15 @@ offset_right = 3484.0
 offset_bottom = 166.0
 rotation = -0.0172763
 theme_override_font_sizes/font_size = 33
-text = "Be careful of dangorus objects
-See if you can grapple across"
+text = "Be careful of dangorus objects.
+See if you can grapple across."
 
 [node name="Label3" type="Label" parent="Labels"]
 offset_left = 2263.0
 offset_top = 372.0
 offset_right = 2528.0
 offset_bottom = 464.0
-text = "Insert Secret Chest Here"
+text = "Insert Secret Chest Here."
 
 [node name="Sprite2D" type="Sprite2D" parent="Labels/Label3"]
 position = Vector2(299, 61)
@@ -292,7 +292,7 @@ offset_top = 306.0
 offset_right = 957.0
 offset_bottom = 469.0
 theme_override_font_sizes/font_size = 42
-text = "Press Left Mouse To Fire Gtapple"
+text = "Press Left Mouse To Fire Grapple."
 
 [node name="Label5" type="Label" parent="Labels"]
 offset_left = 7830.0

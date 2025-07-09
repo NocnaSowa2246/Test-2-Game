@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
 		var hook_instance = hook.instantiate()
 		hook_instance.position = grapple_hook.global_position
 		hook_instance.rotation_degrees = rotation_degrees
-		hook_instance.velocity = Vector2(1000, 0).rotated(gun.rotation)
+		hook_instance.velocity = Vector2(10000, 0).rotated(gun.rotation)
 		get_tree().get_root().add_child(hook_instance)
 		var hook_pos = hook_instance.position
 		var ray_point = grapple_hook.get_collision_point()

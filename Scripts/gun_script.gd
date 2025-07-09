@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 	if ammo>0:
 		if Input.is_action_just_pressed("shoot") and mode == 1 and shootable:
 			bullet_instance = bullet.instantiate()
-			var bullet_instance = bullet.instantiate()
+			bullet_instance = bullet.instantiate()
 			bullet_instance.position = tip.global_position
 			bullet_instance.rotation_degrees = rotation_degrees
 			bullet_instance.velocity = Vector2(bullet_speed, 0).rotated(rotation)
@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 
 func reload()-> void:
 	await get_tree().create_timer(3.0).timeout
-	if stash<20:
+	if stash < 20:
 		ammo = stash
 	else:
 		ammo = 20

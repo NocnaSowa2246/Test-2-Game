@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ccofort3n34cq" path="res://Images/slime_green.png" id="1_4jekx"]
 [ext_resource type="Script" uid="uid://mc1fidd1uat3" path="res://Scene/enemy.gd" id="1_n6qjc"]
-[ext_resource type="PackedScene" path="res://killzone.tscn" id="2_s685e"]
+[ext_resource type="PackedScene" uid="uid://bg46b0smm8aep" path="res://killzone.tscn" id="2_s685e"]
 [ext_resource type="Script" uid="uid://dip06xdp7gjon" path="res://Scripts/killzone.gd" id="3_s685e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iifgy"]

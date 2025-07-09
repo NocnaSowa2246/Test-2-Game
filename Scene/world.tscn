@@ -38,7 +38,7 @@ size = Vector2(3999, 404)
 [node name="world" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_dlwip")]
-position = Vector2(5583, 121)
+position = Vector2(5595, 167)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1423, 442.375)

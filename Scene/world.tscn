@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b7vo7m23ny7mv"]
+[gd_scene load_steps=17 format=3 uid="uid://b7vo7m23ny7mv"]
 
 [ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_emx41"]
 [ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/player.tscn" id="2_dlwip"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b60t3bvkv5sba" path="res://Scene/Spike.tscn" id="5_37axr"]
 [ext_resource type="Texture2D" uid="uid://diyq3kncv77v6" path="res://Images/right-arrow.png" id="5_pcvp0"]
 [ext_resource type="Texture2D" uid="uid://bn4hiw6yf0vhc" path="res://Images/blackdoor.png" id="6_37axr"]
+[ext_resource type="PackedScene" uid="uid://dct3on111rj82" path="res://Scene/enemy.tscn" id="7_ol2hl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlwip"]
 size = Vector2(1139.89, 223.966)
@@ -37,7 +38,7 @@ size = Vector2(3999, 404)
 [node name="world" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_dlwip")]
-position = Vector2(651, 477)
+position = Vector2(5583, 121)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1423, 442.375)
@@ -303,3 +304,7 @@ text = "Tutorial complete!
 Enter the door to begin.
 Good luck!"
 horizontal_alignment = 1
+
+[node name="Enemy" parent="." instance=ExtResource("7_ol2hl")]
+position = Vector2(6225, 184)
+scale = Vector2(12.0542, 12.5649)

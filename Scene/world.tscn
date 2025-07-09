@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://b7vo7m23ny7mv"]
+[gd_scene load_steps=16 format=3 uid="uid://b7vo7m23ny7mv"]
 
 [ext_resource type="Texture2D" uid="uid://vlexjbk4ihyt" path="res://Images/steve.jpg" id="1_emx41"]
 [ext_resource type="PackedScene" uid="uid://da4xgo4live2m" path="res://Scene/player.tscn" id="2_dlwip"]
 [ext_resource type="Texture2D" uid="uid://blmfh8tfvkvi0" path="res://Images/pillar_sprite_sheet 64_128_max.png" id="3_ejll3"]
 [ext_resource type="PackedScene" uid="uid://b60t3bvkv5sba" path="res://Scene/Spike.tscn" id="5_37axr"]
 [ext_resource type="Texture2D" uid="uid://diyq3kncv77v6" path="res://Images/right-arrow.png" id="5_pcvp0"]
+[ext_resource type="Texture2D" uid="uid://bn4hiw6yf0vhc" path="res://Images/blackdoor.png" id="6_37axr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dlwip"]
 size = Vector2(1139.89, 223.966)
@@ -38,79 +39,6 @@ size = Vector2(3999, 404)
 [node name="Player" parent="." instance=ExtResource("2_dlwip")]
 position = Vector2(651, 477)
 
-[node name="wall" type="StaticBody2D" parent="."]
-position = Vector2(372, 635)
-scale = Vector2(7.47004, -0.107159)
-
-[node name="Steve" type="Sprite2D" parent="wall"]
-position = Vector2(202, -34)
-scale = Vector2(5.06667, 1)
-texture = ExtResource("1_emx41")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
-position = Vector2(201.94, -37.3276)
-shape = SubResource("RectangleShape2D_dlwip")
-
-[node name="wall2" type="StaticBody2D" parent="."]
-position = Vector2(334, 671)
-
-[node name="Steve" type="Sprite2D" parent="wall2"]
-position = Vector2(1566, -379)
-scale = Vector2(6.68, 0.22)
-texture = ExtResource("1_emx41")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall2"]
-position = Vector2(1566, -379)
-shape = SubResource("RectangleShape2D_ejll3")
-
-[node name="wall3" type="StaticBody2D" parent="."]
-position = Vector2(334, 671)
-
-[node name="Steve" type="Sprite2D" parent="wall3"]
-position = Vector2(1567, -673)
-scale = Vector2(6.68, 0.22)
-texture = ExtResource("1_emx41")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall3"]
-position = Vector2(1567, -673)
-shape = SubResource("RectangleShape2D_scul4")
-
-[node name="wall4" type="StaticBody2D" parent="."]
-position = Vector2(334, 671)
-
-[node name="Steve" type="Sprite2D" parent="wall4"]
-position = Vector2(2723.13, -823)
-scale = Vector2(3.59889, 1.55889)
-texture = ExtResource("1_emx41")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall4"]
-position = Vector2(2722, -824.5)
-shape = SubResource("RectangleShape2D_ol2hl")
-
-[node name="wall5" type="StaticBody2D" parent="."]
-position = Vector2(334, 671)
-
-[node name="Steve" type="Sprite2D" parent="wall5"]
-position = Vector2(2638, -227)
-scale = Vector2(4.37278, 1.58833)
-texture = ExtResource("1_emx41")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall5"]
-position = Vector2(2718, -224.063)
-shape = SubResource("RectangleShape2D_pcvp0")
-
-[node name="wall6" type="StaticBody2D" parent="."]
-position = Vector2(334, 671)
-
-[node name="Steve" type="Sprite2D" parent="wall6"]
-position = Vector2(-770, -583.5)
-scale = Vector2(3.63333, 4.72444)
-texture = ExtResource("1_emx41")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall6"]
-position = Vector2(-773.375, -579.75)
-shape = SubResource("RectangleShape2D_37axr")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1423, 442.375)
 scale = Vector2(1.54348, 3.99194)
@@ -121,21 +49,212 @@ position = Vector2(2057, 441.875)
 scale = Vector2(1.54348, 3.98118)
 texture = ExtResource("3_ejll3")
 
-[node name="wall7" type="StaticBody2D" parent="."]
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(936, 212)
+rotation = -0.419818
+scale = Vector2(0.478746, 0.223184)
+texture = ExtResource("5_pcvp0")
+
+[node name="Blackdoor" type="Sprite2D" parent="."]
+position = Vector2(8785, 30)
+scale = Vector2(12, 12)
+texture = ExtResource("6_37axr")
+
+[node name="Spikes" type="Node2D" parent="."]
+
+[node name="Spike" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(3760, 619)
+
+[node name="Spike18" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(3831, 619)
+
+[node name="Spike19" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(3708, 617)
+
+[node name="Spike20" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(3632, 619)
+
+[node name="Spike21" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(3558, 619)
+
+[node name="Spike2" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(3904, 619)
+
+[node name="Spike3" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(4048, 619)
+
+[node name="Spike4" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(4192, 619)
+
+[node name="Spike5" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(4342, 618)
+
+[node name="Spike6" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(4503, 616)
+
+[node name="Spike13" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(3987, 612)
+
+[node name="Spike14" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(4126, 614)
+
+[node name="Spike15" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(4270, 616)
+
+[node name="Spike16" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(4433, 619)
+
+[node name="Spike17" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(4575, 619)
+
+[node name="Spike7" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(4645, 619)
+
+[node name="Spike11" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(4793, 617)
+
+[node name="Spike12" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(4711, 619)
+
+[node name="Spike8" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(4858, 619)
+
+[node name="Spike9" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(5003, 621)
+
+[node name="Spike10" parent="Spikes" instance=ExtResource("5_37axr")]
+position = Vector2(4942, 621)
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="wall" type="StaticBody2D" parent="Walls"]
+position = Vector2(372, 635)
+scale = Vector2(7.47004, -0.107159)
+
+[node name="Steve" type="Sprite2D" parent="Walls/wall"]
+position = Vector2(202, -34)
+scale = Vector2(5.06667, 1)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall"]
+position = Vector2(201.94, -37.3276)
+shape = SubResource("RectangleShape2D_dlwip")
+
+[node name="wall2" type="StaticBody2D" parent="Walls"]
 position = Vector2(334, 671)
 
-[node name="Steve" type="Sprite2D" parent="wall7"]
+[node name="Steve" type="Sprite2D" parent="Walls/wall2"]
+position = Vector2(1566, -379)
+scale = Vector2(6.68, 0.22)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall2"]
+position = Vector2(1566, -379)
+shape = SubResource("RectangleShape2D_ejll3")
+
+[node name="wall3" type="StaticBody2D" parent="Walls"]
+position = Vector2(334, 671)
+
+[node name="Steve" type="Sprite2D" parent="Walls/wall3"]
+position = Vector2(1567, -673)
+scale = Vector2(6.68, 0.22)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall3"]
+position = Vector2(1567, -673)
+shape = SubResource("RectangleShape2D_scul4")
+
+[node name="wall4" type="StaticBody2D" parent="Walls"]
+position = Vector2(334, 671)
+
+[node name="Steve" type="Sprite2D" parent="Walls/wall4"]
+position = Vector2(2723.13, -823)
+scale = Vector2(3.59889, 1.55889)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall4"]
+position = Vector2(2722, -824.5)
+shape = SubResource("RectangleShape2D_ol2hl")
+
+[node name="wall5" type="StaticBody2D" parent="Walls"]
+position = Vector2(334, 671)
+
+[node name="Steve" type="Sprite2D" parent="Walls/wall5"]
+position = Vector2(2638, -227)
+scale = Vector2(4.37278, 1.58833)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall5"]
+position = Vector2(2718, -224.063)
+shape = SubResource("RectangleShape2D_pcvp0")
+
+[node name="wall6" type="StaticBody2D" parent="Walls"]
+position = Vector2(334, 671)
+
+[node name="Steve" type="Sprite2D" parent="Walls/wall6"]
+position = Vector2(-770, -583.5)
+scale = Vector2(3.63333, 4.72444)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall6"]
+position = Vector2(-773.375, -579.75)
+shape = SubResource("RectangleShape2D_37axr")
+
+[node name="wall7" type="StaticBody2D" parent="Walls"]
+position = Vector2(334, 671)
+
+[node name="Steve" type="Sprite2D" parent="Walls/wall7"]
 position = Vector2(3739.01, -1066.86)
 rotation = 2.77793
 scale = Vector2(6.61582, 1.37702)
 texture = ExtResource("1_emx41")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall7"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall7"]
 position = Vector2(3751, -1070)
 rotation = -0.378731
 shape = SubResource("RectangleShape2D_ddf65")
 
-[node name="Label" type="Label" parent="."]
+[node name="wall8" type="StaticBody2D" parent="Walls"]
+position = Vector2(-3889, 634)
+scale = Vector2(1.99593, 1.01664)
+
+[node name="Steve" type="Sprite2D" parent="Walls/wall8"]
+position = Vector2(5407, -1330)
+scale = Vector2(9.26166, 1.67222)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall8"]
+position = Vector2(5406.88, -1326)
+shape = SubResource("RectangleShape2D_h7cfj")
+
+[node name="wall9" type="StaticBody2D" parent="Walls"]
+position = Vector2(334, 671)
+
+[node name="Steve" type="Sprite2D" parent="Walls/wall9"]
+position = Vector2(6746.52, -247)
+scale = Vector2(17.7732, 1.79611)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall9"]
+position = Vector2(6746.5, -247)
+shape = SubResource("RectangleShape2D_y56vo")
+
+[node name="wall10" type="StaticBody2D" parent="Walls"]
+position = Vector2(8548, 5186)
+scale = Vector2(0.1, 4)
+
+[node name="Steve" type="Sprite2D" parent="Walls/wall10"]
+position = Vector2(5407, -1330)
+scale = Vector2(9.26166, 1.67222)
+texture = ExtResource("1_emx41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/wall10"]
+position = Vector2(5406.88, -1326)
+shape = SubResource("RectangleShape2D_h7cfj")
+
+[node name="Labels" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
 offset_left = 5177.0
 offset_top = -27.0
 offset_right = 5997.0
@@ -143,13 +262,7 @@ offset_bottom = 99.0
 theme_override_font_sizes/font_size = 46
 text = "Press F to switch to gun and back"
 
-[node name="Sprite2D5" type="Sprite2D" parent="."]
-position = Vector2(936, 212)
-rotation = -0.419818
-scale = Vector2(0.478746, 0.223184)
-texture = ExtResource("5_pcvp0")
-
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="Labels"]
 offset_left = 3001.0
 offset_top = 71.0
 offset_right = 3484.0
@@ -159,44 +272,20 @@ theme_override_font_sizes/font_size = 33
 text = "Be careful of dangorus objects
 See if you can grapple across"
 
-[node name="wall8" type="StaticBody2D" parent="."]
-position = Vector2(334, 671)
-
-[node name="Steve" type="Sprite2D" parent="wall8"]
-position = Vector2(5407, -1330)
-scale = Vector2(9.26166, 1.67222)
-texture = ExtResource("1_emx41")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall8"]
-position = Vector2(5406.88, -1326)
-shape = SubResource("RectangleShape2D_h7cfj")
-
-[node name="wall9" type="StaticBody2D" parent="."]
-position = Vector2(334, 671)
-
-[node name="Steve" type="Sprite2D" parent="wall9"]
-position = Vector2(6746.52, -247)
-scale = Vector2(17.7732, 1.79611)
-texture = ExtResource("1_emx41")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall9"]
-position = Vector2(6746.5, -247)
-shape = SubResource("RectangleShape2D_y56vo")
-
-[node name="Label3" type="Label" parent="."]
+[node name="Label3" type="Label" parent="Labels"]
 offset_left = 2263.0
 offset_top = 372.0
 offset_right = 2528.0
 offset_bottom = 464.0
 text = "Insert Secret Chest Here"
 
-[node name="Sprite2D" type="Sprite2D" parent="Label3"]
+[node name="Sprite2D" type="Sprite2D" parent="Labels/Label3"]
 position = Vector2(299, 61)
 rotation = 1.5526
 scale = Vector2(0.341797, 0.193359)
 texture = ExtResource("5_pcvp0")
 
-[node name="Label4" type="Label" parent="."]
+[node name="Label4" type="Label" parent="Labels"]
 offset_left = 293.0
 offset_top = 306.0
 offset_right = 957.0
@@ -204,65 +293,13 @@ offset_bottom = 469.0
 theme_override_font_sizes/font_size = 42
 text = "Press Left Mouse To Fire Gtapple"
 
-[node name="Spike" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(3760, 619)
-
-[node name="Spike18" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(3831, 619)
-
-[node name="Spike19" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(3708, 617)
-
-[node name="Spike20" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(3632, 619)
-
-[node name="Spike21" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(3558, 619)
-
-[node name="Spike2" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(3904, 619)
-
-[node name="Spike3" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4048, 619)
-
-[node name="Spike4" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4192, 619)
-
-[node name="Spike5" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4342, 618)
-
-[node name="Spike6" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4503, 616)
-
-[node name="Spike13" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(3987, 612)
-
-[node name="Spike14" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4126, 614)
-
-[node name="Spike15" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4270, 616)
-
-[node name="Spike16" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4433, 619)
-
-[node name="Spike17" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4575, 619)
-
-[node name="Spike7" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4645, 619)
-
-[node name="Spike11" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4793, 617)
-
-[node name="Spike12" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4711, 619)
-
-[node name="Spike8" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4858, 619)
-
-[node name="Spike9" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(5003, 621)
-
-[node name="Spike10" parent="." instance=ExtResource("5_37axr")]
-position = Vector2(4942, 621)
+[node name="Label5" type="Label" parent="Labels"]
+offset_left = 7830.0
+offset_top = -115.0
+offset_right = 8650.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 46
+text = "Tutorial complete!
+Enter the door to begin.
+Good luck!"
+horizontal_alignment = 1

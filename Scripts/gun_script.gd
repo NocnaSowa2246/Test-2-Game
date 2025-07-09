@@ -10,6 +10,7 @@ var mode = 0
 var ammo = 20 #bullets in magazine
 var stash = 50 #Bullets total.
 var hook_p = 1
+var shootable = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -20,7 +21,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("swap"):
 		swapper()
 	if ammo>0:
-		if Input.is_action_just_pressed("shoot") and mode == 1:
+		if Input.is_action_just_pressed("shoot") and mode == 1 and shootable:
 			bullet_instance = bullet.instantiate()
 			var bullet_instance = bullet.instantiate()
 			bullet_instance.position = tip.global_position
@@ -29,8 +30,9 @@ func _process(delta: float) -> void:
 			get_tree().get_root().add_child(bullet_instance)
 			ammo = ammo - 1
 			stash = stash - 1
-			
-	
+			shootable = false
+			await get_tree().create_timer(.25).timeout
+			shootable = true
 
 func reload()-> void:
 	await get_tree().create_timer(3.0).timeout

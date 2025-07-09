@@ -7,9 +7,11 @@ const SPEED = 500.00
 var hook_p = 0
 const JUMP_VELOCITY = -500.0
 var grappling = 0
+var run = 1
 
 func _physics_process(delta: float) -> void:
-	if gun.mode == 0 and Input.is_action_just_pressed("shoot") and grappling == 0:
+	#most of this is just for the grappling hook
+	if gun.mode == 0 and Input.is_action_just_pressed("shoot") and grappling == 0 and grapple_hook.cast == 1:
 		hook_p = 0
 		var hook_instance = hook.instantiate()
 		hook_instance.position = grapple_hook.global_position
@@ -40,13 +42,25 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_pressed("jump") and is_on_floor() and grappling == 0:
 		velocity.y = JUMP_VELOCITY
-
+	# If the jump button is let go, you won't go as high.
+	if not Input.is_action_pressed("jump") and velocity.y < 0:
+		velocity.y = 0
 	# Get the input direction and handle the movement/deceleration.
 	var direction := Input.get_axis("left", "right")
 	if direction and grappling == 0:
-		velocity.x = direction * SPEED
+		velocity.x = direction * SPEED * run
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	# Run input
+	if Input.is_key_pressed(KEY_SHIFT):
+		run = 1.5
+	else:
+		run = 1
 	move_and_slide()
 	
+func _process(float):
+	if position.x > 8689:
+		if position.x < 8881:
+			if position.y > -162:
+				if position.y < 222:
+					get_tree().change_scene_to_file("res://Scene/world_2.tscn")

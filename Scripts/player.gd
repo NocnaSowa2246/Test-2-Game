@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @onready var gun = $Gun
 @onready var grapple_hook = $Gun/Grapple
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+
 var hook = preload("res://Scene/hook.tscn")
 const SPEED = 500.00
 var hook_p = 0
@@ -51,7 +53,24 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED * run
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-	# Run input
+
+	
+	if direction > 0:
+			animated_sprite_2d.flip_h = false
+	
+	elif direction < 0:
+		animated_sprite_2d.flip_h = true
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
 	if Input.is_key_pressed(KEY_SHIFT):
 		run = 1.5
 	else:
